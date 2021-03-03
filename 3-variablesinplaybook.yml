@@ -17,7 +17,7 @@
     file:
       path: "{{ webserver_root_dir }}"
       state: directory
-  - name: static website is deployedd
+  - name: static website is deployed
     uri:
       url: https://raw.githubusercontent.com/oldcity255/ansible-lab_oregon/main/index.html
       dest: "{{ webserver_root_dir }}"
