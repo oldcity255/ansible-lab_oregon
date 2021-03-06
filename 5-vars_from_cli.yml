@@ -1,6 +1,6 @@
 - hosts: web
   become: yes
-   vars:
+  vars:
     webserver_root_dir: /var/www/html
   tasks:
   - name: Install apache packages
@@ -18,7 +18,7 @@
       state: directory
   - name: static website is deployed
     uri:
-      url: https://raw.githubusercontent.com/oldcity255/ansible-lab2/main/index.html
+      url: https://raw.githubusercontent.com/oldcity255/ansible-lab_oregon/main/index.html
       dest: "{{ webserver_root_dir }}"
   - name: debug
     debug:
