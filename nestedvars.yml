@@ -1,4 +1,4 @@
-- hosts: db
+- hosts: dev
   become: yes
   vars:
     webserver:
@@ -7,16 +7,16 @@
   tasks:
   - name: Install apache packages
     yum:
-      name: "{{ webserver }}"
+      name: "{{ webserver.type }}"
       state: present
   - name: ensure httpd is running
     service:
-      name: "{{ webserver }}"
+      name: "{{ webserver.type }}"
       state: started
       enabled: yes
   - name: webserver root directory exists
     file:
-      path: "{{ webserver_root_dir }}"
+      path: "{{ webserver.root_dir }}"
       state: directory
   - name: static website is deployed
     uri:
