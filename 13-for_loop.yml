@@ -1,4 +1,4 @@
-- hosts: db
+- hosts: dev
   become: yes
   vars:
     webserver: httpd
