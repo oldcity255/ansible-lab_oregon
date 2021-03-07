@@ -7,4 +7,4 @@ newly_hired:
   role: devops
 - name: someone
   password: something123456
-  role: cloudi
+  role: cloud
